@@ -83,9 +83,11 @@ export async function logoutAdmin() {
 export async function getSettingsDict() {
   const settings = await prisma.systemSetting.findMany();
   const dict: Record<string, string> = {};
-  settings.forEach((s) => {
+
+  for (const s of settings as Array<{ key: string; value: string }>) {
     dict[s.key] = s.value;
-  });
+  }
+
   return dict;
 }
 
