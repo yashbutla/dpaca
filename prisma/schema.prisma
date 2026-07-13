@@ -1,99 +1,96 @@
-  // prisma/schema.prisma
-
-  datasource db {
-  provider = "sqlite"
+generator client {
+  provider = "prisma-client-js"
 }
-  generator client {
-    provider = "prisma-client-js"
-  }
 
-  model HeroSlide {
-    id          String   @id @default(uuid())
-    title       String
-    subtitle    String
-    imageUrl    String
-    order       Int      @default(0)
-    published   Boolean  @default(true)
-    createdAt   DateTime @default(now())
-  }
+datasource db {
+  provider = "postgresql"
+}
 
-  model GalleryItem {
-    id          String   @id @default(uuid())
-    imageUrl    String
-    caption     String
-    category    String
-    subcategory String?
-    isFeatured  Boolean  @default(false)
-    createdAt   DateTime @default(now())
-  }
+model HeroSlide {
+  id        String   @id @default(uuid())
+  title     String
+  subtitle  String
+  imageUrl  String
+  order     Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
 
-  model TimelineEvent {
-    id          String   @id @default(uuid())
-    title       String
-    date        DateTime
-    summary     String
-    imageUrl    String
-    createdAt   DateTime @default(now())
-  }
+model GalleryItem {
+  id          String   @id @default(uuid())
+  imageUrl    String
+  caption     String
+  category    String
+  isFeatured  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  subcategory String?
+}
 
-  model Testimonial {
-    id          String   @id @default(uuid())
-    alumniName  String
-    profession  String
-    story       String
-    imageUrl    String?
-    createdAt   DateTime @default(now())
-  }
+model TimelineEvent {
+  id        String   @id @default(uuid())
+  title     String
+  date      DateTime
+  summary   String
+  imageUrl  String
+  createdAt DateTime @default(now())
+}
 
-  model CsrProject {
-    id          String   @id @default(uuid())
-    name        String
-    dimensions  String?
-    cost        String?
-    status      String   // Fully Funded, Seeking Funding, Urgent Requirement
-    createdAt   DateTime @default(now())
-  }
+model Testimonial {
+  id         String   @id @default(uuid())
+  alumniName String
+  profession String
+  story      String
+  imageUrl   String?
+  createdAt  DateTime @default(now())
+}
 
-  model ContactEnquiry {
-    id          String   @id @default(uuid())
-    name        String
-    email       String
-    phone       String
-    message     String
-    resolved    Boolean  @default(false)
-    createdAt   DateTime @default(now())
-  }
+model CsrProject {
+  id         String   @id @default(uuid())
+  name       String
+  dimensions String?
+  cost       String?
+  status     String
+  createdAt  DateTime @default(now())
+}
 
-  model SystemSetting {
-    key         String   @id
-    value       String
-  }
+model ContactEnquiry {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String
+  message   String
+  resolved  Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
 
-  model Partner {
-    id        String   @id @default(uuid())
-    name      String
-    logoUrl   String?
-    createdAt DateTime @default(now())
-  }
+model SystemSetting {
+  key   String @id
+  value String
+}
 
-  model BoardMember {
-    id        String   @id @default(uuid())
-    name      String
-    position  String
-    imageUrl  String?
-    order     Int      @default(0)
-    createdAt DateTime @default(now())
-  }
+model Partner {
+  id        String   @id @default(uuid())
+  name      String
+  logoUrl   String?
+  createdAt DateTime @default(now())
+}
 
-  model Founder {
-    id        String   @id @default(uuid())
-    name      String
-    title     String
-    initials  String
-    bio       String
-    imageUrl  String?
-    order     Int      @default(0)
-    createdAt DateTime @default(now())
-  }
+model BoardMember {
+  id        String   @id @default(uuid())
+  name      String
+  position  String
+  imageUrl  String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
 
-
+model Founder {
+  id        String   @id @default(uuid())
+  name      String
+  title     String
+  initials  String
+  bio       String
+  imageUrl  String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
