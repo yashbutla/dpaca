@@ -64,7 +64,7 @@ export default async function ContactPage() {
                     </span>
                     <div>
                       <p className="font-bold text-primary-blue text-xs uppercase tracking-wider">Office Location</p>
-                      <p className="text-xs sm:text-sm mt-0.5">{settings.address || "Remand Home Compound, Ahilyanagar, Maharashtra"}</p>
+                      <p className="text-xs sm:text-sm mt-0.5">{settings.address || "District probation and after Care association observation home and children Home, zarekar lane near sabjail, ahilyanagar."}</p>
                     </div>
                   </div>
 
@@ -111,7 +111,7 @@ export default async function ContactPage() {
                     </span>
                     <div>
                       <p className="font-bold text-primary-blue text-xs uppercase tracking-wider">Office Hours</p>
-                      <p className="text-xs sm:text-sm mt-0.5">{settings.hours || "Monday - Saturday: 9:00 AM - 6:00 PM"}</p>
+                      <p className="text-xs sm:text-sm mt-0.5">{settings.hours || "Monday - Saturday: 10:00 AM - 6:00 PM"}</p>
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export default async function ContactPage() {
                   <div className="w-12 h-12 bg-accent-blue text-white rounded-full flex items-center justify-center shadow-md animate-bounce z-10">
                     <MapPin className="w-6 h-6 fill-white" />
                   </div>
-                  <h4 className="font-heading font-extrabold text-primary-blue text-sm z-10 mt-2">Ahilyanagar Remand Home Compound</h4>
+                  <h4 className="font-heading font-extrabold text-primary-blue text-xs z-10 mt-2 text-center px-4">District Probation & After Care Association</h4>
                   <p className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider z-10">Google Map Location Canvas</p>
                 </div>
               </div>

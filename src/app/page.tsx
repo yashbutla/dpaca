@@ -607,8 +607,8 @@ export default async function HomePage() {
             "foundingDate": "1942",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Remand Home Compound, near Collector Office",
-              "addressLocality": "Ahilyanagar",
+              "streetAddress": "District probation and after Care association observation home and children Home, zarekar lane near sabjail",
+              "addressLocality": "ahilyanagar",
               "addressRegion": "Maharashtra",
               "postalCode": "414001",
               "addressCountry": "IN"

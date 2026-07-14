@@ -8,6 +8,12 @@ export default async function PublicFooter() {
     orderBy: { createdAt: "asc" }
   });
 
+  const dbSettings = await prisma.systemSetting.findMany();
+  const settings: Record<string, string> = {};
+  for (const s of dbSettings) {
+    settings[s.key] = s.value;
+  }
+
   const basePartners = dbPartners.length > 0 ? dbPartners : [
     { id: "1", name: "CSA – Catalysts for Social Action", logoUrl: null },
     { id: "2", name: "Cummins India", logoUrl: null },
@@ -167,24 +173,36 @@ export default async function PublicFooter() {
             Get in Touch
           </h4>
           <ul className="flex flex-col gap-3 text-xs text-slate-600">
-            <li className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-accent-blue shrink-0" />
-              <span>Remand Home, Ahilyanagar, Maharashtra</span>
+            <li className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-accent-blue shrink-0 mt-0.5" />
+              <span>{settings.address || "District probation and after Care association observation home and children Home, zarekar lane near sabjail, ahilyanagar."}</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-accent-blue shrink-0" />
-              <a href="tel:0241-2345229" className="hover:underline">0241-2345229</a>
+              <a href={`tel:${(settings.phone || "0241-2345229").replace(/\s+/g, "")}`} className="hover:underline">
+                {settings.phone || "0241-2345229"}
+              </a>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="w-4 h-4 text-accent-blue shrink-0 mt-0.5" />
               <div className="flex flex-col">
-                <a href="mailto:dpaca1942@rediffmail.com" className="hover:underline">dpaca1942@rediffmail.com</a>
-                <a href="mailto:dpaca1977@gmail.com" className="hover:underline">dpaca1977@gmail.com</a>
+                {settings.email ? (
+                  settings.email.split(",").map((email, idx) => (
+                    <a key={idx} href={`mailto:${email.trim()}`} className="hover:underline">
+                      {email.trim()}
+                    </a>
+                  ))
+                ) : (
+                  <>
+                    <a href="mailto:dpaca1942@rediffmail.com" className="hover:underline">dpaca1942@rediffmail.com</a>
+                    <a href="mailto:dpaca1977@gmail.com" className="hover:underline">dpaca1977@gmail.com</a>
+                  </>
+                )}
               </div>
             </li>
             <li className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-accent-blue shrink-0" />
-              <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+              <span>{settings.hours || "Mon - Sat: 10:00 AM - 6:00 PM"}</span>
             </li>
           </ul>
         </div>

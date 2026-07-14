@@ -27,8 +27,8 @@ async function main() {
   const settings = [
     { key: 'email', value: 'info@dpaca-ahilyanagar.org' },
     { key: 'phone', value: '+91 241 234 5678' },
-    { key: 'address', value: 'Remand Home Compound, near Collector Office, Ahilyanagar, Maharashtra 414001' },
-    { key: 'hours', value: 'Monday - Saturday: 9:00 AM - 6:00 PM (Sunday Closed)' },
+    { key: 'address', value: 'District probation and after Care association observation home and children Home, zarekar lane near sabjail, ahilyanagar.' },
+    { key: 'hours', value: 'Monday - Saturday: 10:00 AM - 6:00 PM (Sunday Closed)' },
     { key: 'registration', value: 'E-87 Ahilyanagar' },
   ];
   for (const s of settings) {
