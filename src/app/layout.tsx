@@ -20,7 +20,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "DPACA | District Probation and After Care Association",
   description: "Established in 1942, the Remand Home of Ahilyanagar is a pioneering social service organization dedicated to child care, juvenile rehabilitation, and welfare.",
-  metadataBase: new URL("https://dpaca-ahilyanagar.org"), // Placeholder for production SEO
+  metadataBase: new URL("https://dpacanagar.com"),
+  icons: {
+    icon: "/images/Dpaca-logo.png",
+    shortcut: "/images/Dpaca-logo.png",
+    apple: "/images/Dpaca-logo.png",
+  },
 };
 
 export default function RootLayout({
