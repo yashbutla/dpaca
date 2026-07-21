@@ -18,7 +18,6 @@ import {
   CheckCircle, 
   Building2, 
   Sparkles, 
-  Quote,
   ShieldCheck
 } from "lucide-react";
 
@@ -37,40 +36,7 @@ export default async function HomePage() {
     take: 2, // Grab the latest two features
   });
 
-  // Fetch testimonials from database
-  const dbTestimonials = await prisma.testimonial.findMany({
-    orderBy: { createdAt: "desc" },
-  });
 
-  // Modern clean fallback testimonials if database is empty
-  const fallbackTestimonials = [
-    {
-      id: "fallback-1",
-      alumniName: "Mr. Ramesh Shinde",
-      profession: "Alumni & Police Sub-Inspector",
-      story: "The discipline, vocational electrical training, and secure shelter DPACA provided saved my life when I was orphaned. I am proud to protect society today as a police officer.",
-    },
-    {
-      id: "fallback-2",
-      alumniName: "Dr. Sunita Kulkarni",
-      profession: "Alumni & Social Educator",
-      story: "The education support and guidance I received here allowed me to complete my doctorate in sociology. I dedicate my life to teaching children from similar backgrounds.",
-    },
-    {
-      id: "fallback-3",
-      alumniName: "Mr. Anil Deshmukh",
-      profession: "Alumni & Software Engineer",
-      story: "DPACA gave me access to computer study halls and sponsored my engineering degree. I owe my global career to the trustees and social workers who cared for me.",
-    }
-  ];
-
-  const baseTestimonials = dbTestimonials.length > 0 ? dbTestimonials : fallbackTestimonials;
-
-  // Build repeated list to ensure smooth infinite wrap on all screens
-  let testimonials = [...baseTestimonials];
-  while (testimonials.length < 8) {
-    testimonials = [...testimonials, ...baseTestimonials];
-  }
 
 
 
@@ -457,77 +423,7 @@ export default async function HomePage() {
         {/* Campus Facilities Carousel */}
         <CampusCarousel />
 
-        {/* 5. Testimonials or Impact Stories (Infinite Scrolling Ribbon) */}
-        <section className="section-padding bg-light-blue border-y border-slate-200/50">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center max-w-2xl mx-auto mb-4 flex flex-col items-center gap-4">
-              <span className="font-heading text-xs uppercase font-extrabold tracking-widest text-accent-blue">
-                Impact Stories
-              </span>
-              <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-navy">
-                Alumni Voices & Stories of Impact
-              </h2>
-              <div className="w-12 h-[3px] bg-accent-blue rounded-full"></div>
-            </div>
 
-            {/* Continuous horizontal scrolling track */}
-            <div className="w-full overflow-hidden flex relative mt-10 select-none">
-              <div className="flex gap-6 animate-marquee-slow py-4">
-                {/* Track 1 */}
-                {testimonials.map((t, idx) => (
-                  <div
-                    key={`track1-${t.id}-${idx}`}
-                    className="w-[320px] sm:w-[380px] shrink-0 bg-white p-6 sm:p-8 rounded-card border border-slate-100 shadow-md flex flex-col justify-between gap-5 hover:shadow-lg transition-shadow duration-300 group"
-                  >
-                    <Quote className="w-8 h-8 text-accent-blue/10 shrink-0 group-hover:text-accent-blue/20 transition-colors" />
-                    <p className="text-slate-600 italic text-xs sm:text-sm leading-relaxed flex-grow">
-                      &ldquo;{t.story}&rdquo;
-                    </p>
-                    <div className="flex items-center gap-3.5 border-t border-slate-100 pt-4">
-                      <div className="w-10 h-10 rounded-full bg-accent-blue/10 text-accent-blue flex items-center justify-center font-heading font-extrabold text-sm border border-accent-blue/20 shrink-0">
-                        {t.alumniName[3] || t.alumniName[0] || "A"}
-                      </div>
-                      <div>
-                        <h4 className="font-heading font-extrabold text-navy text-xs sm:text-sm leading-snug">
-                          {t.alumniName}
-                        </h4>
-                        <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5 leading-none">
-                          {t.profession}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-                
-                {/* Track 2 (Duplicated for infinite looping) */}
-                {testimonials.map((t, idx) => (
-                  <div
-                    key={`track2-${t.id}-${idx}`}
-                    className="w-[320px] sm:w-[380px] shrink-0 bg-white p-6 sm:p-8 rounded-card border border-slate-100 shadow-md flex flex-col justify-between gap-5 hover:shadow-lg transition-shadow duration-300 group"
-                  >
-                    <Quote className="w-8 h-8 text-accent-blue/10 shrink-0 group-hover:text-accent-blue/20 transition-colors" />
-                    <p className="text-slate-600 italic text-xs sm:text-sm leading-relaxed flex-grow">
-                      &ldquo;{t.story}&rdquo;
-                    </p>
-                    <div className="flex items-center gap-3.5 border-t border-slate-100 pt-4">
-                      <div className="w-10 h-10 rounded-full bg-accent-blue/10 text-accent-blue flex items-center justify-center font-heading font-extrabold text-sm border border-accent-blue/20 shrink-0">
-                        {t.alumniName[3] || t.alumniName[0] || "A"}
-                      </div>
-                      <div>
-                        <h4 className="font-heading font-extrabold text-navy text-xs sm:text-sm leading-snug">
-                          {t.alumniName}
-                        </h4>
-                        <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5 leading-none">
-                          {t.profession}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* 6. Combined Contact & Get Involved (CTA) */}
         <section className="section-padding bg-white border-b border-slate-100">
