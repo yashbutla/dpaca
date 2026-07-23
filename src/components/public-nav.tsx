@@ -52,7 +52,7 @@ export default function PublicNav() {
                 DPACA AHILYANAGAR
               </span>
               <span className="text-[10px] text-slate-500 font-semibold tracking-wide uppercase leading-none mt-0.5">
-                Estd 1942 | Remand Home
+                Estd 1942 | Observation Home
               </span>
             </div>
           </Link>

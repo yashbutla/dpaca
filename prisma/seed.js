@@ -51,7 +51,7 @@ async function main() {
   await prisma.heroSlide.create({
     data: {
       title: 'Empowering Vulnerable Communities, Championing Justice & Rehabilitation.',
-      subtitle: 'Established in 1942, the District Probation and After Care Association (popularly known as the Remand Home of Ahilyanagar) is a pioneering social service organization dedicated to supporting individuals in need.',
+      subtitle: 'Established in 1942, the District Probation and After Care Association (popularly known as the Observation Home of Ahilyanagar) is a pioneering social service organization dedicated to supporting individuals in need.',
       imageUrl: '/images/hero-classroom.jpg',
       order: 1,
       published: true,
@@ -139,7 +139,7 @@ async function main() {
       name: 'Sunita Deshmukh',
       email: 'sunita.d@gmail.com',
       phone: '+91 88888 77777',
-      message: 'I would like to volunteer as a weekend teacher for the children at the Remand Home. Please let me know the application procedure.',
+      message: 'I would like to volunteer as a weekend teacher for the children at the Observation Home. Please let me know the application procedure.',
       resolved: true,
     }
   });

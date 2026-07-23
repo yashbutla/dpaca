@@ -476,7 +476,7 @@ export default async function AboutPage() {
                 {
                   value: "3",
                   label: "Licensed Facilities",
-                  desc: "Remand Home, Observation Home, and Shishugruha.",
+                  desc: "Children's Home, Observation Home, and Shishugruha.",
                   icon: Award,
                 },
               ].map((stat, index) => {
@@ -800,7 +800,7 @@ export default async function AboutPage() {
                     Established in Ahmednagar
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                    Rescued children during the war emergency. The Remand Home was officially set up under local leadership, sanctioned by the British District Collector.
+                    Rescued children during the war emergency. The Observation Home was officially set up under local leadership, sanctioned by the British District Collector.
                   </p>
                 </div>
               </div>

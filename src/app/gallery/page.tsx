@@ -27,7 +27,7 @@ export default async function GalleryPage() {
               Life & Rehabilitation in Frames
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto leading-relaxed">
-              Explore classrooms, libraries, nurseries, and recreational programs at the Remand Home of Ahilyanagar through documented photographs.
+              Explore classrooms, libraries, nurseries, and recreational programs at the Observation Home of Ahilyanagar through documented photographs.
             </p>
           </div>
         </section>

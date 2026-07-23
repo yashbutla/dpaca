@@ -87,7 +87,7 @@ export default async function HomePage() {
               <div className="lg:col-span-6 relative w-full h-[320px] sm:h-[450px] rounded-card overflow-hidden shadow-xl border border-slate-100 group">
                 <Image
                   src="/images/OFFICE PHOTO.jpeg"
-                  alt="DPACA Remand Home Administrative Office"
+                  alt="DPACA Observation Home Administrative Office"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center group-hover:scale-[1.02] transition-all duration-500"
@@ -107,11 +107,11 @@ export default async function HomePage() {
                 </div>
 
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-navy leading-tight tracking-tight">
-                  The Remand Home of Ahilyanagar
+                  District Probation and After care Association
                 </h2>
 
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  District Probation and After Care Association is popularly referred to as the Remand Home of Ahilyanagar. The Collector/District Magistrate is the ex-officio Chairman of this NGO.
+                  District Probation and After Care Association is popularly referred to as the Observation Home of Ahilyanagar. The Collector/District Magistrate is the ex-officio Chairman of this NGO.
                 </p>
 
                 <p className="text-sm text-slate-600 leading-relaxed">
@@ -358,7 +358,7 @@ export default async function HomePage() {
                   News & Events
                 </span>
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-navy leading-tight tracking-tight">
-                  Updates from the Remand Home
+                  Updates from the Observation Home
                 </h2>
               </div>
               <Link
@@ -497,7 +497,7 @@ export default async function HomePage() {
             "@context": "https://schema.org",
             "@type": "NGO",
             "name": "District Probation and After Care Association (DPACA)",
-            "alternateName": "Remand Home of Ahilyanagar",
+            "alternateName": "Observation Home of Ahilyanagar",
             "url": "https://dpaca-ahilyanagar.org",
             "logo": "https://dpaca-ahilyanagar.org/images/logo.png",
             "foundingDate": "1942",

@@ -21,7 +21,7 @@ export default async function ContactPage() {
         <section className="relative w-full h-[320px] lg:h-[400px] flex items-center justify-center overflow-hidden bg-primary-blue">
           <Image
             src="/images/contact-banner.jpg"
-            alt="DPACA Remand Home Compound Gates"
+            alt="DPACA Observation Home Compound Gates"
             fill
             priority
             className="object-cover object-center brightness-[0.4]"
@@ -32,7 +32,7 @@ export default async function ContactPage() {
               Connect With Us
             </span>
             <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight">
-              Get in Touch with DPACA & Remand Home
+              Get in Touch with DPACA & Observation Home
             </h1>
           </div>
         </section>

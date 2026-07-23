@@ -32,7 +32,7 @@ const supportWays = [
   {
     icon: HandHeart,
     title: "Donate Directly",
-    desc: "Give one-time or monthly to fund meals, books, uniforms, and healthcare for children living at the Remand Home.",
+    desc: "Give one-time or monthly to fund meals, books, uniforms, and healthcare for children living at the Observation Home.",
     color: "text-accent-blue",
     bg: "bg-accent-blue/10",
   },
@@ -202,7 +202,7 @@ export default function GetInvolvedPage() {
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-lg">
                 Your contribution directly funds meals, education, and healthcare for children at
-                the Remand Home. Receive a detailed receipt for every donation.
+                the Observation Home. Receive a detailed receipt for every donation.
               </p>
               <div className="w-12 h-[3px] bg-accent-blue rounded-full" />
             </div>

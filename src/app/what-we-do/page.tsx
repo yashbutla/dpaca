@@ -161,7 +161,7 @@ export default function WhatWeDoPage() {
                   Institutional Education Support
                 </h2>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  We believe schooling is non-negotiable for child development. Every child of school-going age residing within the Remand Home is registered in primary and secondary schools in the vicinity.
+                  We believe schooling is non-negotiable for child development. Every child of school-going age residing within the Observation Home is registered in primary and secondary schools in the vicinity.
                 </p>
                 <p className="text-sm text-slate-600 leading-relaxed">
                   Within our compound, we operate quiet study halls, arrange private tutoring, and supply textbooks, reference libraries, and computers, ensuring that underprivileged children receive equal academic guidance and succeed in national exams.

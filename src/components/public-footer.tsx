@@ -103,7 +103,7 @@ export default async function PublicFooter() {
             </span>
           </div>
           <p className="text-xs text-slate-600 leading-relaxed mt-2">
-            Established in 1942, the District Probation and After Care Association (popularly known as the Remand Home of Ahilyanagar) is a pioneer social welfare trust under the leadership of the District Collector.
+            Established in 1942, the District Probation and After Care Association (popularly known as the Observation Home of Ahilyanagar) is a pioneer social welfare trust under the leadership of the District Collector.
           </p>
           <p className="text-[11px] text-accent-blue font-semibold leading-normal mt-1">
             Registered under the Public Trust Act (Reg No. E-87)
